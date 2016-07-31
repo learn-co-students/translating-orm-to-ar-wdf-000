@@ -11,6 +11,8 @@ DB = ActiveRecord::Base.establish_connection(
       :database => "../db/dogs"
     )
 
+  # Why is this line here?
+  # Ruby gives a warning "already initialized constant DB"
   DB = ActiveRecord::Base.connection
 
   if ENV["ACTIVE_RECORD_ENV"] == "test"
